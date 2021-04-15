@@ -1,26 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi sitio web personal</title>
-  </head>
-  <style>
-    body {
-      height: 100vh;
-      margin: 0;
-      background-color: #37474F;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: sans-serif;
+<html>
+    <body>
+        <div>
+            <p style="float: left;"><img src="imgs/foto_usuario.png" style="width: 210px; min-width: 210px;" border="1px"/></p>
+            <br><h1></bold> &nbsp; Matías Mackenna</bold></h1>
+            <br>
+        </div>
+        <div>
+            <p>
+                &nbsp; &nbsp; <b>Carrera: </b>Ingenieria<br>
+                &nbsp; &nbsp; <b>Generación: </b>2018<br>
+                &nbsp; &nbsp; <b>Fecha de nacimiento: </b>11-10-1999
+            </p>
+        </div>
+        <div id="button"> <button title="Click to Show"  type="button" right="10px" onclick="ocultar()">Mostrar/Ocultar Comentarios</button></div>
+        <div id="comentarios" style="display:none"><h2><bold>Comentarios:</bold></h2></div>
+    </body>
+</html>
+
+<style>
+    #button {
+    position: absolute;
+    top: 32.5%;
+    left: 17%;
     }
-    h1 {
-      margin: 0;
+
+    #comentarios {
+    position: absolute;
+    top: 5.5%;
+    left: 60%;
     }
-  </style>
-  <body>
-    <h1>¡Hola, mi nombre es TU_NOMBRE!</h1>
-  </body>
-</html>    
+</style>
+
+<script>
+    function ocultar(){
+        var spolier = document.getElementById('comentarios');
+
+        if(spolier.style.display == "none"){
+            spolier.style.display= "block";
+        }
+        else {
+            spolier.style.display = "none";
+        }
+    }
+</script>
